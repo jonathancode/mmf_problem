@@ -48,7 +48,10 @@ To setup environment:
   
 3. pip install requirements.txt or simply "pip install pytest"
 
-4. Run the commands below to test. 
+4. Check out the code to a preferred location. 
+	$ ``git clone https://github.com/jonathangarza/mmf_problem.git``
+
+5. Run the commands below to test. 
 
     $ ``time py.test -vx``
     
