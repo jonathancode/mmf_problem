@@ -4,7 +4,7 @@ Test Cases for mmf_problem
 '''
 import pytest
 
-from mmf_problem import *
+import mmf_problem
 
 
 # PyTest Fixtures
@@ -18,28 +18,29 @@ def fail_list(request):
 	return ['([([)])' , '[', ']', '(', '[(])', 'asdfasdf]]]', '(((adsfb]]]', '{{[()]}']
 
 #Start Test
-def test_pass_v1(pass_list):
-	'''
-	Loop through test_pass cases and test if string is valid. 
-	Throw an assertionerror if failed.
-	'''
+class TestV1():
+	def test_pass_v1(self, pass_list):
+		'''
+		Loop through test_pass cases and test if string is valid. 
+		Throw an assertionerror if failed.
+		'''
 
-	for s in pass_list:
-		val = is_string_valid_v1(s)
+		for s in pass_list:
+			val = mmf_problem.is_string_valid_v1(s)
 
-		assert val == True
+			assert val == True
 
 
-def test_fail_v1(fail_list):
-	'''
-	Loop through test_fail cases and test if string is invalid
-	Throw an assertionerror if failed
-	'''
+	def test_fail_v1(self, fail_list):
+		'''
+		Loop through test_fail cases and test if string is invalid
+		Throw an assertionerror if failed
+		'''
 
-	for s in test_fail:
-		val = is_string_valid_v1(s)
+		for s in fail_list:
+			val = mmf_problem.is_string_valid_v1(s)
 
-		assert val == False
+			assert val == False
 
 
 class TestStack():
@@ -51,7 +52,7 @@ class TestStack():
 		'''
 
 		for s in pass_list:
-			val = is_string_valid(s)
+			val = mmf_problem.is_string_valid(s)
 
 			assert val == True
 
@@ -62,8 +63,8 @@ class TestStack():
 		Throw an assertionerror if failed.
 		'''
 
-		for s in test_fail:
-			val = is_string_valid(s)
+		for s in fail_list:
+			val = mmf_problem.is_string_valid(s)
 			
 			assert val == False
 

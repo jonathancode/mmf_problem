@@ -1,10 +1,8 @@
 '''
-	** Modified **
-	Added '<>' and '{}' to solution
-	Optimized code to use the Stack data structure. 
-
-	To Test code runtimes, execute the followinging in terminal
-		time python mmf_jesse.py
+	Look at README to make sure you have the correct environment setup. 
+	To Test code runtimes, execute the followinging in terminal. 
+	pytest must be installed.
+		time py.test -v
 
 	Write a program that determines if a string is valid or invalid. In lieu of
 	a formal definition, generalize from the following examples.
@@ -38,6 +36,7 @@
 
 # First attempt
 GOOD_PAIRINGS = ['[',']','(',')', '<', '>', '{', '}']
+
 def is_string_valid_v1(s):
 	'''
 	Test if a string has valid open and closing brackets
@@ -62,11 +61,15 @@ def is_string_valid(test_str):
 	the GOOD_PAIRINGS_DICT.
 
 	'''
+
 	stack = []
+
 	for ch in test_str:
 		close_pair = GOOD_PAIRINGS_DICT.get(ch, None)
+
 		if close_pair:
 			stack.append(close_pair)
+
 		elif ch in CLOSING_VALUES:
 			# check if no opening pairings
 			if not stack:
@@ -76,11 +79,6 @@ def is_string_valid(test_str):
 				return False
 
 	return not stack
-
-
-# Test Cases
-test_pass = ['[]', '()', '()[]', 'a(b[c]d)e', '[[[((()))]]]', '([([])])', '{[]}']
-test_fail = ['([([)])' , '[', ']', '(', '[(])', 'asdfasdf]]]', '(((adsfb]]]', '{{[()]}']
 
 
 def main():
