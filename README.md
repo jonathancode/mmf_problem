@@ -8,7 +8,7 @@ To setup environment:
   
 2. After virutalenv creation, activate environment. 
 
-  $ source ./mmf_env/bin/activate
+  $ ``source ./mmf_env/bin/activate``
   
 3. pip install requirements.txt or simply "pip install pytest"
 
