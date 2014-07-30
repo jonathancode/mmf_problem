@@ -1,6 +1,11 @@
 mmf_problem
 ===========
 
+Running Tests
+=============
+
+This assumes you already have python, pip, and virutalenv installed.
+
 To setup environment:
 
 1. Create a virutal environment using virtualenv. 
