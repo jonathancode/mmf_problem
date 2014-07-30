@@ -1,7 +1,7 @@
 mmf_problem
 ===========
 
-Write a program that determines if a string is valid or invalid. In lieu of
+	Write a program that determines if a string is valid or invalid. In lieu of
 	a formal definition, generalize from the following examples.
 
 	Examples of valid strings include:
