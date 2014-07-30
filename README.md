@@ -1,6 +1,35 @@
 mmf_problem
 ===========
 
+Write a program that determines if a string is valid or invalid. In lieu of
+	a formal definition, generalize from the following examples.
+
+	Examples of valid strings include:
+
+	[]
+	()
+	()[]
+	a(b[c]d)e
+	[[[((()))]]]
+	([([])])
+	 
+	Examples of invalid strings include:
+
+	([([)])
+	[
+	)
+	[(])
+	asdfasdf]]]
+	(((adsfb]]]
+
+	For example, a command-line program is-string-valid, should produce the 
+	following outputs for the given inputs:
+
+	$ is-string-valid '[]'
+	true
+	$ is-string-valid '['
+	false
+
 Running Tests
 =============
 
