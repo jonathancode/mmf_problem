@@ -1,5 +1,6 @@
 mmf_problem
 ===========
+My solution's to an example problem. 
 
 	Write a program that determines if a string is valid or invalid. In lieu of
 	a formal definition, generalize from the following examples.
