@@ -52,7 +52,7 @@ To setup environment:
 
   $ ``git clone https://github.com/jonathangarza/mmf_problem.git``
 
-5. Run the commands below to test. 
+5. In project directory, run the commands below to test. 
 
     $ ``time py.test -vx``
     
