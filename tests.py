@@ -3,7 +3,7 @@ Test Cases for mmf_problem
 Test fixtures are found in the conftest.py file
 
 '''
-
+import pytest
 import mmf_problem
 
 
@@ -32,7 +32,7 @@ class TestV1():
 
 			assert val == False
 
-
+@pytest.mark.stack
 class TestStack():
 
 	def test_pass_optimized(self, pass_list):
