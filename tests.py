@@ -1,21 +1,11 @@
 '''
 Test Cases for mmf_problem
+Test fixtures are found in the conftest.py file
 
 '''
-import pytest
 
 import mmf_problem
 
-
-# PyTest Fixtures
-@pytest.fixture(scope="module")
-def pass_list(request):
-
-	return ['[]', '()', '()[]', 'a(b[c]d)e', '[[[((()))]]]', '([([])])', '{[]}']
-
-@pytest.fixture(scope="module")
-def fail_list(request):
-	return ['([([)])' , '[', ']', '(', '[(])', 'asdfasdf]]]', '(((adsfb]]]', '{{[()]}']
 
 #Start Test
 class TestV1():
